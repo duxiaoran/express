@@ -1,0 +1,61 @@
+{
+  "name": "ingens_express_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bcrypt": "1.0.2",
+    "body-parser": "1.18.2",
+    "body-parser-xml": "1.1.0",
+    "dotenv": "5.0.1",
+    "express": "4.15.4",
+    "jsonwebtoken": "8.2.0",
+    "mongoose": "5.0.11",
+    "nanoid": "1.0.2",
+    "request": "2.83.0",
+    "request-promise": "4.2.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "6.26.0",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-stage-0": "6.24.1",
+    "better-npm-run": "0.1.0"
+  },
+  "scripts": {
+    "start": "babel-node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "better-npm-run buildAll",
+    "build-main": "better-npm-run build-main",
+    "build-apis": "better-npm-run build-apis",
+    "build-config": "better-npm-run build-config",
+    "build-models": "better-npm-run build-models",
+    "build-env": "better-npm-run build-env",
+    "pack": "better-npm-run pack"
+  },
+  "betterScripts": {
+    "build-main": {
+      "command": "babel index.js -o dist/index.js"
+    },
+    "build-apis": {
+      "command": "babel apis -d dist/apis"
+    },
+    "build-config": {
+      "command": "babel config -d dist/config"
+    },
+    "build-models": {
+      "command": "babel models -d dist/models"
+    },
+    "build-env": {
+      "command": "cp .env dist && cp package.json dist"
+    },
+    "buildAll": {
+      "command": "rm -rf ./dist && mkdir dist && npm run build-main && npm run build-apis && npm run build-config && npm run build-models && npm run build-env"
+    },
+    "pack": {
+      "command": "rimraf dist.tar && tar cvf dist.tar dist"
+    }
+  },
+  "author": "",
+  "license": "ISC"
+}
