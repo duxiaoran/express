@@ -76,7 +76,7 @@ export async function updateRole(id, buildings, menus) {
   if(!buildings && !menus){
     result = {
       code: 10012,
-      errMsg: "楼宇与菜单不能全为空"
+      errMsg: "楼宇与菜单不能全为空999999999"
     }
     return result
   }
