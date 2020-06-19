@@ -8,7 +8,7 @@ export async function createRole(roleName, buildings, menus) {
   if (!roleName) {
     result = {
       code: 10012,
-      errMsg: "角色名eeee不能为空33333hahaha"
+      errMsg: "角色名eeee不能为空33333hahahadd"
     }
     return result
   }
