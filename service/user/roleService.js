@@ -42,7 +42,7 @@ export async function createRole(roleName, buildings, menus) {
         if (doc) {
           result = {
             code: 200,
-            data: '角色创建成功'
+            data: '角色创建成功3333'
           };
         }
       }, (err) => {
