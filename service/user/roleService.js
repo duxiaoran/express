@@ -28,7 +28,7 @@ export async function createRole(roleName, buildings, menus) {
       //用户名已存在
       result = {
         code: 10001,
-        errMsg: "角色已存在"
+        errMsg: "角色已存在wo gai develop"
       };
     } else {
 
@@ -42,7 +42,7 @@ export async function createRole(roleName, buildings, menus) {
         if (doc) {
           result = {
             code: 200,
-            data: '角色创建成功'
+            data: '角色创建成功3333'
           };
         }
       }, (err) => {
