@@ -8,7 +8,7 @@
     "body-parser": "1.18.2",
     "body-parser-xml": "1.1.0",
     "dotenv": "5.0.1",
-    "express": "4.15.4",
+    "express": "4.17.3",
     "jsonwebtoken": "8.2.0",
     "mongoose": "5.7.5",
     "nanoid": "1.0.2",
